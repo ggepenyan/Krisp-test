@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Audio and Video Recorder with Real-Time Filters</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Audio and Video Recorder with Real-Time Filters</h1>
+        <div class="controls">
+            <button id="startRecording">Start Recording</button>
+            <button id="stopRecording" disabled>Stop Recording</button>
+            <button id="stopVideo" disabled>Stop Video</button>
+            <label for="micVolume">Microphone Volume:</label>
+            <input type="range" id="micVolume" min="0" max="2" value="1" step="0.01">
+            <label for="imageUpload">Add Image to Video:</label>
+            <input type="file" id="imageUpload" accept="image/*">
+        </div>
+        <div class="video-container" id="videoContainer">
+            <video class="real-time-video" id="realTimeVideoElement" autoplay muted></video>
+            <canvas id="canvasElement" width="640" height="480"></canvas>
+        </div>
+        <button id="playRecording" disabled>Play Recording</button>
+
+        <script src="app.js"></script>
+    </body>
+</html>
